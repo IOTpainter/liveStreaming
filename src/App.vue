@@ -1,15 +1,34 @@
 <template>
-  <LiveStreaming />
+  <div v-if="!mFlag">
+    桌面端
+    <LiveStreaming />
+  </div>
+
+  <div v-else>
+    移动端
+    <LiveStreamingM />
+  </div>
+
 </template>
 
 <script>
 import LiveStreaming from './components/livestreaming/LiveStreaming'
+import LiveStreamingM from './components/livestreaming/LiveStreamingM'
 
 export default {
   name: 'App',
   components: {
-    LiveStreaming
-  }
+    LiveStreaming,
+    LiveStreamingM
+  },
+  data: function () {
+    return {
+      mFlag: true
+    }
+  },
+  created(){
+    this.mFlag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+  },
 }
 </script>
 

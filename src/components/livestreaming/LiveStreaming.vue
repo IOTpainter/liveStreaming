@@ -7,7 +7,11 @@
 
 export default {
   name: 'LiveStreaming',
-
+  data: function(){
+    return {
+      
+    }
+  }
 }
 </script>
 
