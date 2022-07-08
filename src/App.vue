@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <LiveStreaming />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LiveStreaming from './components/livestreaming/LiveStreaming'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LiveStreaming
   }
 }
 </script>
 
-<style>
+<style type="less" scoped>
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 #app {
+  height: 100%;
+  background: #eee;
+  /* padding: 10px 10px; */
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
