@@ -1,11 +1,11 @@
 <template>
   <div v-if="!mFlag">
-    桌面端
+    <!-- 桌面端 -->
     <LiveStreaming />
   </div>
 
   <div v-else>
-    移动端
+    <!-- 移动端 -->
     <LiveStreamingM />
   </div>
 
